@@ -1,6 +1,5 @@
 package com.zhangzhihao.FileUpload.Java.Utils;
 
-import com.zhangzhihao.FileUpload.Java.Controller.FileUploadController;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -79,12 +78,7 @@ public class SaveFile {
      * @return
      */
     public static String getRealPath() {
-        String realPath;
-        String path = FileUploadController.class.getResource("/").getFile();
-        int index = path.indexOf("build");
-        realPath = path.substring(0, index) + "/src/main/webapp/upload/";
-        realPath = realPath.replaceFirst("/", "");
-        return realPath;
+        return "D:/project/FileUpload/build/";
     }
 
 
